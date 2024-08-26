@@ -1,11 +1,10 @@
 {
-  "name": "01-playground-javascript",
+  "name": "02-playground-typescript",
   "version": "1.0.0",
-  "description": "Plauground to show code snippets via JavaScript",
-  "main": "index.js",
+  "description": "Playground to show code snippets via TypeScript",
+  "type": "module",
   "scripts": {
-    "start": "nodemon --quiet --watch ./src --ext js --exec node ./src/index.js"
-
+    "start": "nodemon --quiet --watch ./src --ext ts --exec node --experimental-specifier-resolution=node --loader=ts-node/esm --no-warnings ./src/index.ts"
   },
   "keywords": [
     "lemoncode",
@@ -28,6 +27,9 @@
     "url": "https://github.com/Lemoncode/bootcamp-backend/issues"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "@types/node": "^18.16.19",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   }
 }
